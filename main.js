@@ -49,3 +49,28 @@ let fetchAllpds = async () => {
     tbody.innerHTML = response;
 };
 fetchAllpds();
+
+// Edit ajax request
+
+tbody.addEventListener('click', (e) => {
+
+   
+    if(e.target && e.target.matches('a.editLink')) {
+e.preventDefault();
+let id = e.target.getAttribute("id");
+
+edit(id);
+
+console.log(id); 
+    }
+});
+
+
+let edit= async (id) => {
+let data= await fetch(`action.php?edit=1&id=${id}`,{
+method : "GET",
+});
+let response = await data.json();
+console.log(response);
+
+};

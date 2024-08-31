@@ -77,6 +77,71 @@
 
 <!-- Add modal End -->
 
+<!-- Edit modal start -->
+<div class="modal " tabindex="-1" id="editmodale" role="dialog">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h5 class="modal-title">Modifica PDS</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+         </div>
+    
+      <div class="modal-body " >
+        <form id="edit-user-form" class="p-2" novalidate>
+          <input type="hidden" name="id" id="id">
+            <div class="row mb-4 gx-3">    
+            <div class="col">  
+            <input type="number" name="n_pds" class="form-control form-control-lg" placeholder=" #PDS" required>
+            <div class ="invalid-feedback">#PDS richiesto!</div>
+            </div>
+            <div class="col">  
+            <input type="date" name="data_pds" class="form-control form-control-lg" placeholder="Data PDS" required>
+            <div class ="invalid-feedback">Data richiesta!</div>
+            </div>
+
+            <div class="mb-3">  
+            <input type="text" name="protocollo"  class="form-control form-control-lg" placeholder="#Protocollo" required>
+            <div class ="invalid-feedback">#Protollo Richiesto!</div>
+            </div>
+
+            <div class="mb-4">  
+            <input type="number" name="capitolo" class="form-control form-control-lg" placeholder="Capitolo" required>
+            <div class ="invalid-feedback">#capitolo Richiesto!</div>
+            </div>
+            <div class="mb-4">  
+            <input type="number" name="art" class="form-control form-control-lg" placeholder="Articolo" required>
+            <div class ="invalid-feedback">#Articolo Richiesto!</div>
+            </div>
+            <div class="mb-4">  
+            <input type="number" name="prog"  class="form-control form-control-lg" placeholder="Programma" required>
+            <div class ="invalid-feedback">#Programma Richiesto!</div>
+            </div>
+
+            <div class="mb-3">  
+            <input type="text" name="oggetto" class="form-control form-control-lg" placeholder="Oggetto" required>
+            <div class ="invalid-feedback">Oggetto richiesto!</div>
+            </div>
+            <div class="mb-3">  
+            <input type="text" name="reparto"  class="form-control form-control-lg" placeholder="Reparto" required>
+            <div class ="invalid-feedback">Reparto richiesto!</div>
+            </div>
+      <div class="mb-3">
+        <input type="submit" value="Edit" class="btn btn-primary btn-success btn-lg" id="edit">
+       
+
+          </div>
+        </form>
+            </div>    
+
+            
+        </div>
+    </div> 
+  </div>
+</div>
+
+<!-- Edit modal End -->
+
     <div class="container">
         <div class ="row mt-4">
             <div class="col-lg-12 d-flex justify-content-between align-items-center">
@@ -116,13 +181,15 @@
                             </thead>
                             
                             <tbody>
+
+                            
                             </tbody>
                         </table>
                     </div>
                </div>
             </div>              
         </div>
-        <script src="main.js" ></script> 
+ <script src="main.js" ></script>        
 </body>
 
 </html>

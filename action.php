@@ -1,3 +1,5 @@
+
+
 <?php
 require_once 'db.php';
 require_once 'util.php';
@@ -44,7 +46,7 @@ if($pds){
                           <td>'.$row['reparto'].'</td>
                          
                         <td>
-                        <a href="#" id="' . $row['id_pds'] .'" class="btn btn-success btn-sm rounded-pill py-0">Edit</a>
+                        <a href="#" id="' . $row['id_pds'] .'" class="btn btn-success btn-sm rounded-pill py-0 editLink" data-toggle="modal" data-target="#editmodale">Edit</a>
                         <a href="#" id="' . $row['id_pds'] .'" class="btn btn-danger btn-sm rounded-pill py-0">Delete</a>
                         </td>
                         </tr>';
@@ -58,4 +60,14 @@ if($pds){
 }
 }
 
+// handle Edit
+
+if(isset($_GET['edit'])){
+$id=$_GET['id'];
+
+$pds=$db->readOne($id);
+echo json_encode($pds);
+}
+
 ?>
+

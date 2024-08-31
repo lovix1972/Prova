@@ -32,6 +32,18 @@ $stmt->execute([
         $stmt->execute();
         $result=$stmt->fetchAll();
     return $result;
-    }    
+    }   
+    
+    
+    public function readOne(){
+        $sql='SELECT * FROM registro_pds where id = :id ';
+        $stmt=$this->conn->prepare($sql);
+        $stmt->execute(['id' => $id]);
+        $result=$stmt->fetch();
+    return $result;
+    }   
+    
+
+
 }
 ?>
