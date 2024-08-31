@@ -27,38 +27,38 @@
         <form id="add-user-form" class="p-2" novalidate>
             <div class="row mb-4 gx-3">    
             <div class="col">  
-            <input type="number" name="n_pds" id="n_pds" class="form-control form-control-lg" placeholder=" #PDS" required>
+            <input type="number" name="n_pds" class="form-control form-control-lg" placeholder=" #PDS" required>
             <div class ="invalid-feedback">#PDS richiesto!</div>
             </div>
             <div class="col">  
-            <input type="date" name="data_pds" id="data_pds" class="form-control form-control-lg" placeholder="Data PDS" required>
+            <input type="date" name="data_pds" class="form-control form-control-lg" placeholder="Data PDS" required>
             <div class ="invalid-feedback">Data richiesta!</div>
             </div>
 
             <div class="mb-3">  
-            <input type="text" name="protocollo" id="protocollo" class="form-control form-control-lg" placeholder="#Protocollo" required>
+            <input type="text" name="protocollo"class="form-control form-control-lg" placeholder="#Protocollo" required>
             <div class ="invalid-feedback">#Protollo Richiesto!</div>
             </div>
 
             <div class="mb-4">  
-            <input type="number" name="capitolo" id="capitolo" class="form-control form-control-lg" placeholder="Capitolo" required>
+            <input type="number" name="capitolo" class="form-control form-control-lg" placeholder="Capitolo" required>
             <div class ="invalid-feedback">#capitolo Richiesto!</div>
             </div>
             <div class="mb-4">  
-            <input type="number" name="art" id="art" class="form-control form-control-lg" placeholder="Articolo" required>
+            <input type="number" name="art"  class="form-control form-control-lg" placeholder="Articolo" required>
             <div class ="invalid-feedback">#Articolo Richiesto!</div>
             </div>
             <div class="mb-4">  
-            <input type="number" name="prog" id="prog" class="form-control form-control-lg" placeholder="Programma" required>
+            <input type="number" name="prog"  class="form-control form-control-lg" placeholder="Programma" required>
             <div class ="invalid-feedback">#Programma Richiesto!</div>
             </div>
 
             <div class="mb-3">  
-            <input type="text" name="oggetto" id="oggetto" class="form-control form-control-lg" placeholder="Oggetto" required>
+            <input type="text" name="oggetto" class="form-control form-control-lg" placeholder="Oggetto" required>
             <div class ="invalid-feedback">Oggetto richiesto!</div>
             </div>
             <div class="mb-3">  
-            <input type="text" name="reparto" id="reparto" class="form-control form-control-lg" placeholder="Reparto" required>
+            <input type="text" name="reparto" class="form-control form-control-lg" placeholder="Reparto" required>
             <div class ="invalid-feedback">Reparto richiesto!</div>
             </div>
       <div class="mb-3">
@@ -92,42 +92,42 @@
           <input type="hidden" name="id" id="id">
             <div class="row mb-4 gx-3">    
             <div class="col">  
-            <input type="number" name="n_pds" class="form-control form-control-lg" placeholder=" #PDS" required>
+            <input type="number" name="n_pds" id="n_pds" class="form-control form-control-lg" placeholder=" #PDS" required>
             <div class ="invalid-feedback">#PDS richiesto!</div>
             </div>
             <div class="col">  
-            <input type="date" name="data_pds" class="form-control form-control-lg" placeholder="Data PDS" required>
+            <input type="date" name="data_pds" id="data_pds" class="form-control form-control-lg" placeholder="Data PDS" required>
             <div class ="invalid-feedback">Data richiesta!</div>
             </div>
 
             <div class="mb-3">  
-            <input type="text" name="protocollo"  class="form-control form-control-lg" placeholder="#Protocollo" required>
+            <input type="text" name="protocollo" id="protocollo" class="form-control form-control-lg" placeholder="#Protocollo" required>
             <div class ="invalid-feedback">#Protollo Richiesto!</div>
             </div>
 
             <div class="mb-4">  
-            <input type="number" name="capitolo" class="form-control form-control-lg" placeholder="Capitolo" required>
+            <input type="number" name="capitolo" id="capitolo"class="form-control form-control-lg" placeholder="Capitolo" required>
             <div class ="invalid-feedback">#capitolo Richiesto!</div>
             </div>
             <div class="mb-4">  
-            <input type="number" name="art" class="form-control form-control-lg" placeholder="Articolo" required>
+            <input type="number" name="art" id="art" class="form-control form-control-lg" placeholder="Articolo" required>
             <div class ="invalid-feedback">#Articolo Richiesto!</div>
             </div>
             <div class="mb-4">  
-            <input type="number" name="prog"  class="form-control form-control-lg" placeholder="Programma" required>
+            <input type="number" name="prog" id="prog" class="form-control form-control-lg" placeholder="Programma" required>
             <div class ="invalid-feedback">#Programma Richiesto!</div>
             </div>
 
             <div class="mb-3">  
-            <input type="text" name="oggetto" class="form-control form-control-lg" placeholder="Oggetto" required>
+            <input type="text" name="oggetto" id="oggetto" class="form-control form-control-lg" placeholder="Oggetto" required>
             <div class ="invalid-feedback">Oggetto richiesto!</div>
             </div>
             <div class="mb-3">  
-            <input type="text" name="reparto"  class="form-control form-control-lg" placeholder="Reparto" required>
+            <input type="text" name="reparto" id="reparto" class="form-control form-control-lg" placeholder="Reparto" required>
             <div class ="invalid-feedback">Reparto richiesto!</div>
             </div>
       <div class="mb-3">
-        <input type="submit" value="Edit" class="btn btn-primary btn-success btn-lg" id="edit">
+        <input type="submit" value="Update" class="btn btn-primary btn-success btn-block btn-lg" id="edit-btn">
        
 
           </div>
@@ -182,7 +182,7 @@
                             
                             <tbody>
 
-                            
+
                             </tbody>
                         </table>
                     </div>
