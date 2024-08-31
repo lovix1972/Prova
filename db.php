@@ -58,7 +58,7 @@ public function update( $id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $p
         'prog'=>$prog,
         'oggetto'=>$oggetto,
         'reparto'=>$reparto,
-        //'id' => $id
+        'id' => $id
     ]);
 
 return true;
@@ -66,4 +66,4 @@ return true;
 
 
 }
-?>
+
