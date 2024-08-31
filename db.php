@@ -46,8 +46,8 @@ $stmt->execute([
 
 // update PDS
 
-public function update($id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto){
-    $sql='UPDATE registro_pds set n_pds = :n_pds, data_pds = :data_pds, protocollo = :protocollo, capitolo = :capitolo, art =:art, prog = :prog, oggetto = :oggeto, reparto = :reparto WHERE id = :id';
+public function update( $id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto){
+    $sql='UPDATE registro_pds SET n_pds = :n_pds, data_pds = :data_pds, protocollo = :protocollo, capitolo = :capitolo, art = :art, prog = :prog, oggetto = :oggetto, reparto = :reparto WHERE id_pds = :id';
     $stmt=$this->conn->prepare($sql);
     $stmt->execute([
         'n_pds'=>$n_pds,
@@ -58,7 +58,7 @@ public function update($id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $pr
         'prog'=>$prog,
         'oggetto'=>$oggetto,
         'reparto'=>$reparto,
-        'id' => $id
+        //'id' => $id
     ]);
 
 return true;

@@ -127,7 +127,7 @@
             <div class ="invalid-feedback">Reparto richiesto!</div>
             </div>
       <div class="mb-3">
-        <input type="submit" value="Update" class="btn btn-primary btn-success btn-block btn-lg" id="edit-btn">
+        <input type="submit" value="Salva" class="btn btn-primary btn-success btn-block btn-lg" id="edit-btn">
        
 
           </div>

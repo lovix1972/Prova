@@ -73,24 +73,29 @@ echo json_encode($pds);
 
 // Hnadle Update
 
-if(isset($_POST['update'])){
-   $id = $util->testInput($_POST['id']);
-   $n_pds = $util->testInput($_POST['n_pds']);
-   $data_pds = $util->testInput($_POST['data_pds']);
-   $protocollo = $util->testInput($_POST['protocollo']);
-   $capitolo = $util->testInput($_POST['capitolo']);
-   $art = $util->testInput($_POST['art']);
-   $prog = $util->testInput($_POST['prog']);
-   $oggetto = $util->testInput($_POST['oggetto']);
-   $reparto = $util->testInput($_POST['reparto']);
+if(isset($_POST['update'])) {
 
 
-if($db->update($id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto)){
-    echo $util->showMessage('Ok', 'Dati Aggiornati!');
+   $id =            $util->testInput($_POST['id']);
+   $n_pds =         $util->testInput($_POST['n_pds']);
+   $data_pds =      $util->testInput($_POST['data_pds']);
+   $protocollo =    $util->testInput($_POST['protocollo']);
+   $capitolo =      $util->testInput($_POST['capitolo']);
+   $art =           $util->testInput($_POST['art']);
+   $prog =          $util->testInput($_POST['prog']);
+   $oggetto =       $util->testInput($_POST['oggetto']);
+   $reparto =       $util->testInput($_POST['reparto']);
 
-} else {
-    echo $util->showMessage('Attenzione', 'Qualcosa non ha funzionato...');
-}
+
+    if($db->update($id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto)){
+
+
+    echo $util->showMessage('Modifica eseguita', 'Dati Aggiornati!');
+
+    } else {
+
+    echo $util->showMessage('Attenzione', 'Qualcosa è andato storto!');
+    }
 }
 
 ?>

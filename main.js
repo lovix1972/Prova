@@ -1,8 +1,6 @@
 
 
-
 let addForm = document.getElementById("add-user-form");
-
 let updateForm = document.getElementById("edit-user-form");
 let showAlert= document.getElementById("showAlert");
 let addModal= new bootstrap.Modal(document.getElementById("aprimodale"));
@@ -89,7 +87,7 @@ document.getElementById("reparto").value=response.reparto;
 
 //Update PDS Ajax
 
-updateForm.addEventListener('submit', async (e) => {
+    updateForm.addEventListener('submit', async (e) => {
    
     e.preventDefault();
     let formData= new FormData(updateForm);
@@ -103,19 +101,19 @@ updateForm.addEventListener('submit', async (e) => {
  
     }else{
         document.getElementById('edit-btn').value = 'Plese wait...';
-        let data = await fetch("action.php",
-             { method: "POST", 
+        let data = await fetch("action.php", {
+                method: "POST", 
                 body: formData,
              
              });
    
      let response = await data.text();
-console.log(response);
+    console.log(response);
      showAlert.innerHTML = response;
      document.getElementById('edit-btn').value= "Modifica";
      updateForm.reset();
      updateForm.classList.remove('was-validated');
-     updateModal.hide();
+     editModal.hide();
      fetchAllpds();
     }
 });
