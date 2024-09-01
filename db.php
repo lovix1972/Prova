@@ -52,6 +52,7 @@ public function update($id,  $n_pds, $data_pds, $protocollo, $capitolo, $art, $p
     $stmt=$this->conn->prepare($sql);
 
     $stmt->execute([
+<<<<<<< HEAD
 
         'id'            =>  $id,
         'n_pds'         =>  $n_pds,
@@ -63,6 +64,17 @@ public function update($id,  $n_pds, $data_pds, $protocollo, $capitolo, $art, $p
         'oggetto'       =>  $oggetto,
         'reparto'       =>  $reparto
        
+=======
+        'n_pds'=>$n_pds,
+        'data_pds'=>$data_pds, 
+        'protocollo'=>$protocollo,
+        'capitolo'=>$capitolo,
+        'art'=>$art,
+        'prog'=>$prog,
+        'oggetto'=>$oggetto,
+        'reparto'=>$reparto,
+        'id' => $id
+>>>>>>> 45e4f115530f679c65f696890c5fa162083b50fc
     ]);
 
 return true;
@@ -70,4 +82,4 @@ return true;
 
 
 }
-?>
+
