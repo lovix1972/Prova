@@ -56,9 +56,13 @@ fetchAllpds();
 tbody.addEventListener('click', (e) => {
 
    
-    if(e.target && e.target.matches('a.editLink')) {
+    if(e.target && e.target.matches("a.editLink")) {
     e.preventDefault();
+    
     let id = e.target.getAttribute("id");
+
+
+
 edit(id);
 
 
@@ -66,15 +70,15 @@ edit(id);
         }
     });
 
-
-let edit = async (id) => {
-let data= await fetch(`action.php?edit=1&id=${id}`,{
+const edit = async (id) => {
+const data = await fetch(`action.php?edit=1&id=${id}`,{
 method : 'GET',
 });
 let response = await data.json();
-console.log(response);
 
-document.getElementById("id").value=response.id;
+
+document.getElementById("id").value=response.id_pds;
+
 document.getElementById("n_pds").value=response.n_pds;
 document.getElementById("data_pds").value=response.data_pds;
 document.getElementById("protocollo").value=response.protocollo;
@@ -87,29 +91,33 @@ document.getElementById("reparto").value=response.reparto;
 
 //Update PDS Ajax
 
-    updateForm.addEventListener('submit', async (e) => {
+   updateForm.addEventListener('submit', async(e) => {
    
     e.preventDefault();
+  
     let formData= new FormData(updateForm);
     formData.append("update", 1);
     
     if(updateForm.checkValidity() === false){
-        e.preventDefault();
+       e.preventDefault();
         e.stopPropagation();
         updateForm.classList.add("was-validated");
+       
         return false;
- 
+  
     }else{
         document.getElementById('edit-btn').value = 'Plese wait...';
-        let data = await fetch("action.php", {
-                method: "POST", 
+        let data = await fetch('action.php', {
+                method: 'POST', 
                 body: formData,
+          
              
              });
    
      let response = await data.text();
-    console.log(response);
+
      showAlert.innerHTML = response;
+      
      document.getElementById('edit-btn').value= "Modifica";
      updateForm.reset();
      updateForm.classList.remove('was-validated');

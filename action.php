@@ -71,10 +71,11 @@ $pds=$db->readOne($id);
 echo json_encode($pds);
 }
 
-// Hnadle Update
+// Handle Update
 
 if(isset($_POST['update'])) {
 
+//print_r($_POST);
 
    $id =            $util->testInput($_POST['id']);
    $n_pds =         $util->testInput($_POST['n_pds']);
@@ -87,7 +88,7 @@ if(isset($_POST['update'])) {
    $reparto =       $util->testInput($_POST['reparto']);
 
 
-    if($db->update($id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto)){
+    if($db->update( $id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto)){
 
 
     echo $util->showMessage('Modifica eseguita', 'Dati Aggiornati!');

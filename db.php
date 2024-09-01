@@ -36,7 +36,7 @@ $stmt->execute([
     
     
     public function readOne($id){
-        $sql='SELECT * FROM registro_pds where id_pds = :id ';
+        $sql='SELECT * FROM registro_pds where id_pds =:id ';
         $stmt=$this->conn->prepare($sql);
         $stmt->execute(['id' => $id]);
         $result=$stmt->fetch();
@@ -46,19 +46,23 @@ $stmt->execute([
 
 // update PDS
 
-public function update( $id, $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto){
-    $sql='UPDATE registro_pds SET n_pds = :n_pds, data_pds = :data_pds, protocollo = :protocollo, capitolo = :capitolo, art = :art, prog = :prog, oggetto = :oggetto, reparto = :reparto WHERE id_pds = :id';
+public function update($id,  $n_pds, $data_pds, $protocollo, $capitolo, $art, $prog, $oggetto, $reparto){
+    $sql="UPDATE registro_pds SET n_pds = :n_pds, data_pds = :data_pds, protocollo = :protocollo, capitolo = :capitolo, art = :art, prog = :prog, oggetto = :oggetto, reparto = :reparto WHERE id_pds = :id";
+
     $stmt=$this->conn->prepare($sql);
+
     $stmt->execute([
-        'n_pds'=>$n_pds,
-        'data_pds'=>$data_pds, 
-        'protocollo'=>$protocollo,
-        'capitolo'=>$capitolo,
-        'art'=>$art,
-        'prog'=>$prog,
-        'oggetto'=>$oggetto,
-        'reparto'=>$reparto,
-        //'id' => $id
+
+        'id'            =>  $id,
+        'n_pds'         =>  $n_pds,
+        'data_pds'      =>  $data_pds, 
+        'protocollo'    =>  $protocollo,
+        'capitolo'      =>  $capitolo,
+        'art'           =>  $art,
+        'prog'          =>  $prog,
+        'oggetto'       =>  $oggetto,
+        'reparto'       =>  $reparto
+       
     ]);
 
 return true;
