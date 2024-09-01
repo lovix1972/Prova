@@ -2,7 +2,7 @@
 
 
 class Config {
-     private const DBHOST = '192.168.0.2';
+     private const DBHOST = '192.168.0.250';
      private const DBUSER = 'lovix';
      private const DBPASS = 'Molly_2024';
      private const DBNAME = 'gecofi';
